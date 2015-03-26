@@ -1,5 +1,6 @@
 import commands
 import time
+import sys
 
 def cmp_apktool(apkdir):
 	entry_time = time.time()
@@ -19,5 +20,5 @@ def cmp_aapt(apkdir):
 	end_time = time.time()
 	return float(end_time - entry_time)
 
-print "APKTool total time %f" %cmp_apktool("/Users/mac/Desktop/smsup_signed.apk")
-print "AAPT total time %f" %cmp_aapt("/Users/mac/Desktop/smsup_signed.apk")
+print "APKTool total time %f" %cmp_apktool(sys.argv[1])
+print "AAPT total time %f" %cmp_aapt(sys.argv[1])
